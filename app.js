@@ -6,6 +6,7 @@ const session = require('express-session')
 var expressValidator = require('express-validator');
 const fileUpload = require('express-fileupload')
 const passport = require('passport')
+const port = process.env.PORT || 3000;
 
 
 
@@ -126,9 +127,8 @@ app.use('/user',user)
 
 
 //start server
-const port = 3000;
-app.listen(port,() => {
-    console.log("Running on " + port);
+app.listen(port,()=>{
+  console.log('Server is up on port' + port);
 })
 
 
