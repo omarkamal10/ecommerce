@@ -42,7 +42,7 @@ router.post('/register',(req,res) => {
 
             if (user) {
                 req.flash('danger','User already exists!')
-                res.redirect('/users/register')
+                res.redirect('/user/register')
             }
             else{
                 var user = new User({
@@ -62,7 +62,7 @@ router.post('/register',(req,res) => {
                             if (err) console.log(err);
                             else{
                                 req.flash('success','Welcome to our website ya Fa2eer!')
-                                res.redirect('/users/login')
+                                res.redirect('/user/login')
                             }
                         })
                     })
